@@ -25,12 +25,12 @@ func GetDateFormatFor(locale string) string {
 	switch strings.ToLower(locale) {
 	case "en_ca":
 		return date_en_ca
-	case "fr-ca", "fr_us":
+	case "fr-ca", "fr_ca", "fr_us", "fr-us":
 		return date_fr_ca
-	case "fr_BE", "fr_CA", "fr_CH", "fr_FR", "fr":
+	case "fr-be", "fr-ch", "fr-fr", "fr_be", "fr_ch", "fr_fr", "fr":
 		return date_fr
-	case "zh_CN", "zh_TW", "zh":
+	case "zh-cn", "zh-tw", "zh_cn", "zh_tw", "zh":
 		return date_zh
 	}
-	return time_en_us
+	return date_en_us
 }
